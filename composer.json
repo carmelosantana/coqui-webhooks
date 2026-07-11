@@ -1,0 +1,51 @@
+{
+    "name": "coquibot/coqui-toolkit-webhooks",
+    "description": "Incoming webhooks for Coqui: HTTP receiver + management CRUD, HMAC verifiers (GitHub/Slack/generic), and the webhook toolkit.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "coquibot/coqui": "@dev",
+        "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\Webhooks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\Webhooks\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../coqui-webhooks",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "php-agents": {
+            "apiFeatures": [
+                "CoquiBot\\Toolkits\\Webhooks\\WebhooksFeature"
+            ],
+            "toolkits": [
+                "CoquiBot\\Toolkits\\Webhooks\\WebhookToolkit"
+            ],
+            "description": "Incoming webhooks: receiver + management API and the webhook toolkit."
+        }
+    }
+}
