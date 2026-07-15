@@ -37,7 +37,9 @@ final readonly class WebhookHandler
      */
     public function register(Router $router): void
     {
-        $router->post('/api/v1/webhooks/incoming/{name}', $this->handleIncoming(...));
+        // Public route: authenticated by the webhook signature (see handleIncoming), not the API key.
+        // @phpstan-ignore argument.type (coqui's addPublicRoute docblock declares the params arg as array<string,string>, but Router::dispatch spreads {name} as an individual string; handleIncoming(ServerRequestInterface, string $name) matches the real runtime contract, as coqui's own PublicRouteMiddlewareStackTest confirms)
+        $router->addPublicRoute('POST', '/api/v1/webhooks/incoming/{name}', $this->handleIncoming(...));
     }
 
     /**

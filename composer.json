@@ -7,7 +7,7 @@
         "php": "^8.4"
     },
     "require-dev": {
-        "coquibot/coqui": "@dev",
+        "coquibot/coqui": "^0.0.27",
         "pestphp/pest": "^4.0",
         "phpstan/phpstan": "^2.0"
     },
@@ -21,15 +21,6 @@
             "CoquiBot\\Toolkits\\Webhooks\\Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../coqui-webhooks",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,
