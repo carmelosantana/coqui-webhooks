@@ -1,5 +1,5 @@
 {
-    "name": "coquibot/coqui-toolkit-webhooks",
+    "name": "carmelosantana/coqui-webhooks",
     "description": "Incoming webhooks for Coqui: HTTP receiver + management CRUD, HMAC verifiers (GitHub/Slack/generic), and the webhook toolkit.",
     "type": "library",
     "license": "MIT",
@@ -10,6 +10,9 @@
         "coquibot/coqui": "^0.0.27",
         "pestphp/pest": "^4.0",
         "phpstan/phpstan": "^2.0"
+    },
+    "replace": {
+        "coquibot/coqui-toolkit-webhooks": "self.version"
     },
     "autoload": {
         "psr-4": {

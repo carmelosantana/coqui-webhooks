@@ -1,4 +1,4 @@
-# coqui-toolkit-webhooks
+# coqui-webhooks
 
 Optional [Coqui](https://github.com/carmelosantana/coqui) mod that adds the
 **incoming webhooks** feature: an HTTP receiver endpoint, management CRUD API,
@@ -13,7 +13,7 @@ points, with no core changes.
 ## Install
 
 ```bash
-/mods install coquibot/coqui-toolkit-webhooks
+/mods install carmelosantana/coqui-webhooks
 ```
 
 The mod self-registers on two surfaces:
