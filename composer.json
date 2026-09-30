@@ -1,5 +1,5 @@
 {
-    "name": "coquibot/coqui-toolkit-webhooks",
+    "name": "carmelosantana/coqui-webhooks",
     "description": "Incoming webhooks for Coqui: HTTP receiver + management CRUD, HMAC verifiers (GitHub/Slack/generic), and the webhook toolkit.",
     "type": "library",
     "license": "MIT",
